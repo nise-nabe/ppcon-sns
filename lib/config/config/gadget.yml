@@ -210,3 +210,11 @@ birthdayBox:
   description:
     ja_JP: "バースデイ通知ボックスを設置できます。"
   component: [member, birthdayBox]
+
+profileListBox:
+  caption:
+    ja_JP: "全員のプロフィール"
+  description:
+    ja_JP: "全員プロフィール情報のリストを表示します"
+  viewable_privilege: 4
+  component: [member, allProfileListBox]

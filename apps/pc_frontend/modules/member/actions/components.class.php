@@ -22,6 +22,11 @@ class memberComponents extends opMemberComponents
     }
   }
 
+  public function executeAllProfileListBox($request)
+  {
+    $this->members = Doctrine::getTable('Member')->findActiveMember();
+  }
+
   public function executeSmtProfileListBox($request)
   {
     if ($request->hasParameter('id'))
