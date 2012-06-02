@@ -300,7 +300,6 @@ pre {
  * Header
  *--------------------------------------------*/
 #Header {
-  background: #092f56 url(../images/bg_header.gif) repeat-x scroll 0 0;
   overflow: visible;
   width: 100%;
   height: 80px;
@@ -314,7 +313,8 @@ pre {
   margin: 0;
   width: 100px;
   height: 80px;
-  background: transparent url(../images/skin_header_logo.jpg) no-repeat scroll 0 0;
+  background: transparent url(/images/ppcon.jpg) no-repeat scroll 0 0;
+  background-size: 100%;
   float: left;
 }
 
