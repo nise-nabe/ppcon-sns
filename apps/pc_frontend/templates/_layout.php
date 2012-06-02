@@ -38,6 +38,11 @@ var openpne = '.$json.';
 <?php echo $op_config->get('pc_html_top') ?>
 <div id="Container" class="container" style="margin-top:60px;">
 
+<div id="Header">
+<div id="HeaderContainer">
+<?php include_partial('global/header') ?>
+</div><!-- HeaderContainer -->
+</div><!-- Header -->
 
 <div id="Contents">
 <div id="ContentsContainer">
