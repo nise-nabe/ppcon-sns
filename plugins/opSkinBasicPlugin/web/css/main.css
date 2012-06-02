@@ -165,15 +165,11 @@ strong {
 div.parts table {
   table-layout: fixed;
   width: 100%;
-  border-width: 0 1px 1px 0;
-  border-style: solid;
   border-color: #CCCCCC;
 }
 
 div.parts th,
 div.parts td {
-  border-width: 1px 0 0 1px;
-  border-style: solid;
   border-color: #CCCCCC;
 }
 
@@ -249,7 +245,7 @@ pre {
 #LayoutB,
 #LayoutC {
   float: left;
-  width: 720px;
+  width: 950px;
 }
 
 #LayoutA #Left {
@@ -258,8 +254,6 @@ pre {
 }
 
 #LayoutA #Center {
-  float: right;
-  width: 440px;
 }
 
 #LayoutA #Bottom {
@@ -663,7 +657,6 @@ pre {
  * Contents
  *--------------------------------------------*/
 #Contents {
-  background: transparent url(../images/bg_contents.gif) repeat-x scroll 0 0;
 }
 
 /*----------------------------------------------
@@ -708,9 +701,7 @@ div.partsHeading {
   margin-bottom: 5px;
   padding: 2px 8px 2px 10px;
   height: 30px;
-  background: transparent url(../images/bg_parts_heading_720.gif) no-repeat 0 0;
   line-height: 26px;
-  color: #FFFFFF;
   font-size: 100%;
   text-align: left;
 }
@@ -724,7 +715,6 @@ div.partsHeading a {
 }
 
 #LayoutA #Center div.partsHeading {
-  background-image: url(../images/bg_parts_heading_440.gif);
 }
 
 #LayoutB #Left div.partsHeading {

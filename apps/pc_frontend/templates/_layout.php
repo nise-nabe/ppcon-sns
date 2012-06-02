@@ -4,6 +4,7 @@
 <?php include_http_metas() ?>
 <?php include_metas() ?>
 <?php include_title() ?>
+<?php use_stylesheet('bootstrap') ?>
 <?php include_stylesheets() ?>
 <?php if (Doctrine::getTable('SnsConfig')->get('customizing_css')): ?>
 <link rel="stylesheet" type="text/css" href="<?php echo url_for('@customizing_css') ?>" />
@@ -35,33 +36,11 @@ var openpne = '.$json.';
 <?php echo $op_config->get('pc_html_top2') ?>
 <div id="Body">
 <?php echo $op_config->get('pc_html_top') ?>
-<div id="Container">
+<div id="Container" class="container" style="margin-top:60px;">
 
-<div id="Header">
-<div id="HeaderContainer">
-<?php include_partial('global/header') ?>
-</div><!-- HeaderContainer -->
-</div><!-- Header -->
 
 <div id="Contents">
 <div id="ContentsContainer">
-
-<div id="localNav">
-<?php
-$context = sfContext::getInstance();
-$module = $context->getActionStack()->getLastEntry()->getModuleName();
-$localNavOptions = array(
-  'is_secure' => opToolkit::isSecurePage(),
-  'type'      => sfConfig::get('sf_nav_type', sfConfig::get('mod_'.$module.'_default_nav', 'default')),
-  'culture'   => $context->getUser()->getCulture(),
-);
-if ('default' !== $localNavOptions['type'])
-{
-  $localNavOptions['nav_id'] = sfConfig::get('sf_nav_id', $context->getRequest()->getParameter('id'));
-}
-include_component('default', 'localNav', $localNavOptions);
-?>
-</div><!-- localNav -->
 
 <div id="Layout<?php echo $layout ?>" class="Layout">
 
@@ -78,12 +57,6 @@ include_component('default', 'localNav', $localNavOptions);
 </div><!-- Top -->
 <?php endif; ?>
 
-<?php if (has_slot('op_sidemenu')): ?>
-<div id="Left">
-<?php include_slot('op_sidemenu') ?>
-</div><!-- Left -->
-<?php endif; ?>
-
 <div id="Center">
 <?php echo $sf_content ?>
 </div><!-- Center -->
@@ -95,10 +68,6 @@ include_component('default', 'localNav', $localNavOptions);
 <?php endif; ?>
 
 </div><!-- Layout -->
-
-<div id="sideBanner">
-<?php include_component('default', 'sideBannerGadgets'); ?>
-</div><!-- sideBanner -->
 
 </div><!-- ContentsContainer -->
 </div><!-- Contents -->
@@ -114,12 +83,6 @@ document.getElementById("SmtSwitchLink").addEventListener("click", function() {
 ') ?>
 </div>
 <?php endif ?>
-
-<div id="Footer">
-<div id="FooterContainer">
-<?php include_partial('global/footer') ?>
-</div><!-- FooterContainer -->
-</div><!-- Footer -->
 
 <?php echo $op_config->get('pc_html_bottom2') ?>
 </div><!-- Container -->

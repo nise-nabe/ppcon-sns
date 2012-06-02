@@ -141,6 +141,13 @@ class MemberTable extends opAccessControlDoctrineTable
       ->fetchOne();
   }
 
+  public function findActiveMember()
+  {
+    return $this->createQuery('m')
+      ->where('m.is_active = ?', true)
+      ->execute();
+  }
+
   public function findByRegisterToken($token)
   {
     $config = Doctrine::getTable('MemberConfig')
