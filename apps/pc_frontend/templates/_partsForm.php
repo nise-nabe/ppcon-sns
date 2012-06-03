@@ -112,7 +112,7 @@ if ($options['mark_required_field']
 <ul class="moreInfo button">
 <li>
 <?php foreach($forms as $form): echo $form->renderHiddenFields(); endforeach; ?>
-<input type="submit" class="input_submit" value="<?php echo $options['button'] ?>" />
+<input type="submit" class="input_submit btn" value="<?php echo $options['button'] ?>" />
 </li>
 </ul>
 </div>
