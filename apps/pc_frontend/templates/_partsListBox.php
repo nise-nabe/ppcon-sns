@@ -7,6 +7,6 @@
 <td><?php echo $options['list']->getRaw($key) ?></td>
 </tr>
 <?php endforeach; ?>
-</body>
+</tbody>
 <?php include_customizes($id, 'lastRow') ?>
 </table>
