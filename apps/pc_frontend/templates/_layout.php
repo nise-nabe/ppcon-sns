@@ -56,6 +56,12 @@ var openpne = '.$json.';
 <?php op_include_parts('alertBox', 'flashNotice', array('body' => __($sf_user->getFlash('notice'), $sf_data->getRaw('sf_user')->getFlash('notice_params', array())))) ?>
 <?php endif; ?>
 
+<?php if (has_slot('op_top')): ?>
+<div id="Top">
+<?php include_slot('op_top') ?>
+</div><!-- Top -->
+<?php endif; ?>
+
 <div id="Center">
 <?php echo $sf_content ?>
 </div><!-- Center -->
