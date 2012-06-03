@@ -68,7 +68,7 @@ foreach ($members as $member)
     $list[$caption] = $profileValue;
   }
   $options = array(
-    'title' => $member->getName().'さんの自己紹介',
+    'title' => $member->getName(),
     'list' => $list,
   );
   op_include_parts('listBox', 'profile', $options);
