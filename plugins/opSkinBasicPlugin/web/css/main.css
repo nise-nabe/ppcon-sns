@@ -204,6 +204,7 @@ div#LayoutC {
   zoom: 1;
   overflow: hidden;
   overflow: -moz-scrollbars-none;
+  padding-top: 30px;
 }
 
 #Left,
@@ -592,7 +593,6 @@ pre {
 }
 
 #globalNav li a:hover {
-  background: transparent url(../images/bg_globalnav_hover.gif) repeat-x scroll 0 0;
 }
 
 #localNav {
@@ -726,7 +726,6 @@ div.partsHeading a {
 }
 
 #LayoutC #Center div.partsHeading {
-  background-image: url(../images/bg_parts_heading_650.gif);
 }
 
 div.partsHeading h3 {
