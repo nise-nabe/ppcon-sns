@@ -33,7 +33,8 @@ class memberComponents extends opMemberComponents
     $this->members = array();
     foreach ($members as $member)
     {
-      if ('man' === $member->getProfile('sex'))
+      $profile = $member->getProfile('op_preset_sex');
+      if (!is_null($profile) && 'Man' === $member->getProfile('op_preset_sex')->getValue())
       {
         $this->members[] = $member;
       }
@@ -46,7 +47,8 @@ class memberComponents extends opMemberComponents
     $this->members = array();
     foreach ($members as $member)
     {
-      if ('female' === $member->getProfile('sex'))
+      $profile = $member->getProfile('op_preset_sex');
+      if (!is_null($profile) && 'Female' === $member->getProfile('op_preset_sex')->getValue())
       {
         $this->members[] = $member;
       }
