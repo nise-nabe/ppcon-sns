@@ -15,6 +15,6 @@ Gadget:
     sort_order: 10
 
   gadget_profile_list_box:
-    type: "content"
+    type: "contents"
     name: "profileListBox"
     sort_order: 10
