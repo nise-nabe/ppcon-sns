@@ -35,7 +35,14 @@ foreach ($members as $member)
 
     if ('textarea' == $profile->getFormType())
     {
-      $profileValue = op_auto_link_text(nl2br($profileValue));
+      if ('op_preset_self_introduction' === $profile->getName() && include_once 'markdown.php')
+      {
+        $profileValue = MarkDown($profileValue);
+      }
+      else
+      {
+        $profileValue = op_auto_link_text(nl2br($profileValue));
+      }
     }
 
     if ($profile->getProfile()->isPreset())
