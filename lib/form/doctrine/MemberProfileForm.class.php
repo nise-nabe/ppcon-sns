@@ -174,6 +174,10 @@ class MemberProfileForm extends BaseForm
         {
           $this->widgetSchema->setHelp($profile->getName(), 'The public_flag for your age can be configure at "Settings" page.');
         }
+        elseif ('op_preset_self_introduction' === $profile->getName())
+        {
+          $this->widgetSchema->setHelp($profile->getName(), 'This Profile supported markdown format');
+        }
       }
     }
   }

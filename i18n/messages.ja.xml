@@ -141,7 +141,11 @@
       <trans-unit id="">
         <source>Public flag</source>
         <target>公開範囲</target>
-      </trans-unit> 
+      </trans-unit>
+      <trans-unit id="">
+        <source>This Profile supported markdown format</source>
+        <target>このプロフィール項目は MarkDown 形式をサポートしています</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
