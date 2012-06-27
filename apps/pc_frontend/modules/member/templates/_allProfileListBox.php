@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 foreach ($members as $member)
 {
