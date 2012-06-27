@@ -218,3 +218,19 @@ profileListBox:
     ja_JP: "全員プロフィール情報のリストを表示します"
   viewable_privilege: 4
   component: [member, allProfileListBox]
+
+maleProfileListBox:
+  caption:
+    ja_JP: "男性全員のプロフィール"
+  description:
+    ja_JP: "男性全員プロフィール情報のリストを表示します"
+  viewable_privilege: 4
+  component: [member, allMaleProfileListBox]
+
+femaleProfileListBox:
+  caption:
+    ja_JP: "女性全員のプロフィール"
+  description:
+    ja_JP: "女性全員プロフィール情報のリストを表示します"
+  viewable_privilege: 4
+  component: [member, allFemaleProfileListBox]
