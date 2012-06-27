@@ -7,7 +7,7 @@ general:
     Caption:  "SNS名"
     FormType: "input"
     ValueType: "text"
-    Default:   "MySNS"
+    Default:   "ペアプロ合コン イントロダクション"
     IsRequired: true
 
   sns_title:
@@ -24,7 +24,7 @@ general:
     Caption:   "管理者メールアドレス"
     FormType:  "input"
     ValueType:  "email"
-    Default:    "sns@example.com"
+    Default:    "ppcon8@gmail.com"
     IsRequired: true
     IsTrim:     true
 
@@ -47,7 +47,7 @@ general:
     ValueType: "text"
     IsRequired: true
     IsTrim:     true
-    Default:    1
+    Default:    0
     Choices:
       - "使用しない"
       - "使用する"
@@ -58,7 +58,7 @@ general:
     FormType:   "radio"
     ValueType:  "text"
     IsRequired: true
-    Default:    1
+    Default:    0
     Choices:
       - "使用しない"
       - "使用する"
@@ -71,7 +71,7 @@ general:
     ValueRegexp: "/^[1-9]\d*[K|M]?$/"
     IsRequired:  true
     IsTrim:      true
-    Default:     "300K"
+    Default:     "0"
 
   is_use_captcha:
     Name:       "is_use_captcha"
@@ -128,7 +128,7 @@ advanced:
     FormType:   "checkbox"
     ValueType:  "text"
     IsRequired: true
-    Default:    [0, 3]
+    Default:    [0]
     Choices:
       - "Mon"
       - "Tue"
@@ -182,7 +182,7 @@ advanced:
     FormType:  "radio"
     ValueType: "text"
     IsRequired: true
-    Default:    1
+    Default:    0
     Choices:
       - "使用しない"
       - "使用する"
