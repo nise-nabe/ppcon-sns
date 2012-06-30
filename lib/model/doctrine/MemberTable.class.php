@@ -46,7 +46,7 @@ class MemberTable extends opAccessControlDoctrineTable
 
     return $ids;
   }
- 
+
   public function getInactiveMemberIds()
   {
     static $queryCacheHash;
@@ -224,15 +224,17 @@ class MemberTable extends opAccessControlDoctrineTable
 
   public function getFemaleMembers()
   {
-     $members = $this->findActiveMember();
+     $members = $this->getMembersNotAdmin();
      $result = array();
      foreach ($members as $member)
      {
-       if ('female' === $member->getProfile('sex'))
+       $profile = $member->getProfile('op_preset_sex');
+       if (!is_null($profile) && 'Female' === $member->getProfile('op_preset_sex')->getValue())
        {
          $result[] = $member;
        }
      }
+
      return $result;
 
   }
