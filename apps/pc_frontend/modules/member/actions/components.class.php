@@ -24,7 +24,12 @@ class memberComponents extends opMemberComponents
 
   public function executeAllProfileListBox($request)
   {
-    $this->members = Doctrine::getTable('Member')->findActiveMember();
+    $this->members = Doctrine::getTable('Member')->getMembersNotAdmin();
+  }
+
+  public function executeStaffProfileListBox($request)
+  {
+    $this->members = Doctrine::getTable('Member')->getMembersAdmin();
   }
 
   public function executeAllMaleProfileListBox($request)
