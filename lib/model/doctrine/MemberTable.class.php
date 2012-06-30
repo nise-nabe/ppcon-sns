@@ -203,7 +203,16 @@ class MemberTable extends opAccessControlDoctrineTable
   {
      $members = $this->findActiveMember();
      unset($members[0]);
-     return $members;
+     foreach ($members as $member)
+     {
+       $config = $member->getConfig('is_staff');
+       if (!$config)
+       {
+         $result[] = $member;
+       }
+     }
+
+     return $result;
   }
 
   public function getMaleMembers()
@@ -236,6 +245,20 @@ class MemberTable extends opAccessControlDoctrineTable
      }
 
      return $result;
+  }
 
+  public function getStaffMembers()
+  {
+     $members = $this->findActiveMember();
+     foreach ($members as $member)
+     {
+       $config = $member->getConfig('is_staff');
+       if ($config)
+       {
+         $result[] = $member;
+       }
+     }
+
+     return $result;
   }
 }

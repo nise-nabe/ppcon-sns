@@ -42,6 +42,11 @@ class memberComponents extends opMemberComponents
     $this->members = Doctrine::getTable('Member')->getFemaleMembers();
   }
 
+  public function executeAllStaffProfileListBox($request)
+  {
+    $this->members = Doctrine::getTable('Member')->getStaffMembers();
+  }
+
   public function executeSmtProfileListBox($request)
   {
     if ($request->hasParameter('id'))

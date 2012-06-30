@@ -234,3 +234,11 @@ femaleProfileListBox:
     ja_JP: "女性全員プロフィール情報のリストを表示します"
   viewable_privilege: 4
   component: [member, allFemaleProfileListBox]
+
+staffProfileListBox:
+  caption:
+    ja_JP: "スタッフ全員のプロフィール"
+  description:
+    ja_JP: "スタッフ全員プロフィール情報のリストを表示します"
+  viewable_privilege: 4
+  component: [member, allStaffProfileListBox]
