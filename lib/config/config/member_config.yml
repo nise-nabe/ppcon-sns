@@ -14,6 +14,17 @@ general:
     enable_pc:     true
     enable_mobile: true 
 
+isStaff:
+  is_staff:
+    Name: "is_staff"
+    ValueType: "boolaen"
+    isRegst: false
+    IsConfig:   false
+    IsRequired: false
+    IsUnique:   false
+    IsConfirm:  false
+    Default: 0
+
 publicFlag:
   _attributes:
     caption: "Public Flag Configuration"
