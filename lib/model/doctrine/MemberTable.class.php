@@ -198,4 +198,34 @@ class MemberTable extends opAccessControlDoctrineTable
 
     return $member;
   }
+
+  public function getMaleMembers()
+  {
+     $members = $this->findActiveMember();
+     $result = array();
+     foreach ($members as $member)
+     {
+       if ('man' === $member->getProfile('sex'))
+       {
+         $result[] = $member;
+       }
+     }
+
+     return $result;
+   }
+
+  public function getFemaleMembers()
+  {
+     $members = $this->findActiveMember();
+     $result = array();
+     foreach ($members as $member)
+     {
+       if ('female' === $member->getProfile('sex'))
+       {
+         $result[] = $member;
+       }
+     }
+     return $result;
+
+  }
 }

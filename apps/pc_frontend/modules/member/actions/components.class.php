@@ -29,30 +29,12 @@ class memberComponents extends opMemberComponents
 
   public function executeAllMaleProfileListBox($request)
   {
-    $members = Doctrine::getTable('Member')->findActiveMember();
-    $this->members = array();
-    foreach ($members as $member)
-    {
-      $profile = $member->getProfile('op_preset_sex');
-      if (!is_null($profile) && 'Man' === $member->getProfile('op_preset_sex')->getValue())
-      {
-        $this->members[] = $member;
-      }
-    }
+    $this->members = Doctrine::getTable('Member')->getMaleMembers();
   }
 
   public function executeAllFemaleProfileListBox($request)
   {
-    $members = Doctrine::getTable('Member')->findActiveMember();
-    $this->members = array();
-    foreach ($members as $member)
-    {
-      $profile = $member->getProfile('op_preset_sex');
-      if (!is_null($profile) && 'Female' === $member->getProfile('op_preset_sex')->getValue())
-      {
-        $this->members[] = $member;
-      }
-    }
+    $this->members = Doctrine::getTable('Member')->getFemaleMembers();
   }
 
   public function executeSmtProfileListBox($request)

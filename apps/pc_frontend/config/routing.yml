@@ -248,3 +248,11 @@ no_default:
 google_maps:
   url:  /googlemaps
   param: { module: googlemaps, action: index }
+
+profile_male:
+  url: /profile/male
+  param: { module: profiles, action: male }
+
+profile_female:
+  url: /profile/female
+  param: { module: profiles, action: female }
