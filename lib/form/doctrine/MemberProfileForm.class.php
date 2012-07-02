@@ -170,11 +170,7 @@ class MemberProfileForm extends BaseForm
       if ($profile->isPreset())
       {
         $this->widgetSchema->setLabel($profile->getName(), $presetList[$profile->getRawPresetName()]['Caption']);
-        if ('op_preset_birthday' === $profile->getName())
-        {
-          $this->widgetSchema->setHelp($profile->getName(), 'The public_flag for your age can be configure at "Settings" page.');
-        }
-        elseif ('op_preset_self_introduction' === $profile->getName())
+        if ('op_preset_self_introduction' === $profile->getName())
         {
           $this->widgetSchema->setHelp($profile->getName(), 'This Profile supported markdown format');
         }
