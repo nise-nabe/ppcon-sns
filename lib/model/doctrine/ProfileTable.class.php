@@ -18,7 +18,6 @@ class ProfileTable extends Doctrine_Table
   protected $publicFlags = array(
     self::PUBLIC_FLAG_WEB     => 'All Users on the Web',
     self::PUBLIC_FLAG_SNS     => 'All Members',
-    self::PUBLIC_FLAG_FRIEND  => '%my_friend%',
     self::PUBLIC_FLAG_PRIVATE => 'Private',
   );
 
