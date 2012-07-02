@@ -45,6 +45,7 @@ class memberComponents extends opMemberComponents
   public function executeAllStaffProfileListBox($request)
   {
     $this->members = Doctrine::getTable('Member')->getStaffMembers();
+    shuffle($this->members);
   }
 
   public function executeSmtProfileListBox($request)
